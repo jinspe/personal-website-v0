@@ -17,7 +17,7 @@ function SocialLink({
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <Icon className="h-6 w-6 fill-zinc-400 transition group-hover:fill-zinc-300" />
     </Link>
   );
 }
@@ -38,7 +38,7 @@ function Avatar({
         alt="Jean Duquenne 8bit avatar"
         width={64}
         height={64}
-        className=" h-16 w-16 rounded-full bg-zinc-100 object-cover sm:h-20 sm:w-20 dark:bg-zinc-800"
+        className="h-16 w-16 rounded-full bg-zinc-800 object-cover sm:h-20 sm:w-20"
         priority
       />
     </Link>
