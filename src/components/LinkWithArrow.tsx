@@ -32,7 +32,7 @@ export default function LinkWithArrow({
       target="_blank"
       rel="noreferrer noopener"
       aria-label={`${prevTitle && `${prevTitle}, `}${title} (opens in a new tab)`}
-      title={title}
+      // title={title}
     >
       {fullContainer && (
         <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 md:block"></span>

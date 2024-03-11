@@ -48,7 +48,7 @@ const experiences: IExperience[] = [
     endDate: "Nov 2023",
     description: `Designed and developed three web applications, recognized with awards in hackathons, and selected for incubation by Binance and Google Startups. 
     Iterating towards Product-Market Fit, orchestrated advanced features and complex user flows, including smart-contract tracking, multisig transactions, embedded tracking scripts, APIs, form builders, token gating, analytic dashboards, and more. 
-    Led the development of a rapid solution architecture, maintaining a clean, modular, and easily maintainable codebase. 
+    Led development, driving fast development cycles while maintaining a clean, modular, and easily maintainable codebase
     Executed Continuous Integration/Deployment, pull requests, code reviews, recruitments, and comprehensive testing.`,
     // description:
     //  "Led the design and development of three web applications, recognized with awards in hackathons, and selected for incubation by Binance and Google startups program. Iterating our way to Product Market Fit, I orchestrated advanced features and complex user flows, including smart-contract tracking, multisig transactions, embedded tracking scripts, APIs, form builders, token gating, and analytic dashboards. Elected CTO for the team, showcasing rapid solution architecture and implementation skills while maintaining a clean, modular, and easily maintainable codebase. Oversaw optimal developer environment and documentation for efficient next-day updates based on customer requests. Executed Continuous Integration/Deployment Pipeline Integration, pull requests, code reviews, and comprehensive testing.",
