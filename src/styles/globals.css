@@ -19,7 +19,7 @@ body,
   @apply bg-black leading-relaxed text-zinc-400 antialiased;
 }
 .eyebrow {
-  @apply py-10 text-lg font-semibold uppercase tracking-wider text-zinc-200;
+  @apply py-5 text-lg font-semibold uppercase tracking-wider text-zinc-200 sm:py-10;
 }
 
 .button {

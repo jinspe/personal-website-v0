@@ -22,7 +22,7 @@ export function FadeIn({
   const shouldReduceMotion = useReducedMotion();
   const isInStaggerGroup = useContext(FadeInStaggerContext);
 
-  const y = side === "up" ? 24 : -24;
+  const y = side === "up" ? 44 : -44;
 
   return (
     <motion.div
@@ -65,7 +65,7 @@ export function FadeSide({
 }) {
   const shouldReduceMotion = useReducedMotion();
   const isInStaggerGroup = useContext(FadeInStaggerContext);
-  const x = side === "left" ? -24 : 24;
+  const x = side === "left" ? -44 : 44;
 
   return (
     <motion.div

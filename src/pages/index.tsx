@@ -1,21 +1,20 @@
 import Head from "next/head";
 import ContactFormSection from "~/components/ContactFormSection";
-import { Navbar } from "~/components/Navbar";
 import HeroSection, { ProfileLinks } from "~/components/HeroSection";
 import ExperienceSection from "~/components/ExperienceSection";
-import PageSpotlight from "~/components/Effects/PageSpotlight";
 import { FadeIn } from "~/components/Effects/FadeIn";
+import Layout from "~/components/Layout";
 
 const title = "Jean Duquenne";
 const description = "Jean Duquenne | Software Engineer";
 const websiteUrl = "https://jeanduquenne.com";
-const ogImage = "/og-jd.png";
+const ogImage = "/og-image.png";
 const keywords =
   "Jean Duquenne, web development, software engineering, computer vision, machine learning, full-stack web development, software engineer, web3 developer";
 
 /*
- FIXME: contact form section looks a bit empty, can play with using sticky with 2 col layout or adding some images or gifs
  TODO : Add images and gifs to the experience cards and projects
+ TODO : Add a projects
  TODO : Create blog post like pages for the experiences and projects
 */
 
@@ -54,37 +53,28 @@ export default function Home() {
         {/* Robots Meta Tag */}
         <meta name="robots" content="index, follow" />
       </Head>
-      <>
-        <main
-          className="mx-auto max-w-screen-xl px-6 pb-24 lg:px-12 lg:pb-0"
-          id="about"
-        >
-          <Navbar />
-          <PageSpotlight />
-          <div className="mt-14 sm:mt-20 md:mt-32">
-            <HeroSection />
+      <Layout>
+        <div className="mt-14 sm:mt-20 md:mt-32">
+          <HeroSection />
+        </div>
+        <div className="relative mt-4 justify-between gap-10 sm:mt-12 md:mt-16 lg:flex">
+          <div className="pt-10 lg:pb-16">
+            <ExperienceSection />
           </div>
-
-          <div className="relative mt-4 justify-between gap-10 sm:mt-12 md:mt-16 lg:flex">
-            <div className="pt-10 lg:pb-16">
-              <ExperienceSection />
-            </div>
-
-            <div className="mt-4 sm:mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
-              <div className=" flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
-                <div className="flex grow flex-col justify-between pt-10 lg:pb-16">
-                  <ContactFormSection />
-                  <div className="mt-6 hidden pl-4 lg:block">
-                    <FadeIn viewportAlt="once">
-                      <ProfileLinks />
-                    </FadeIn>
-                  </div>
+          <div className="mt-4 sm:mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
+            <div className=" flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
+              <div className="flex grow flex-col justify-between pt-10 lg:pb-16">
+                <ContactFormSection />
+                <div className="mt-6 hidden pl-4 lg:block">
+                  <FadeIn viewportAlt="once">
+                    <ProfileLinks />
+                  </FadeIn>
                 </div>
               </div>
             </div>
           </div>
-        </main>
-      </>
+        </div>
+      </Layout>
     </>
   );
 }
