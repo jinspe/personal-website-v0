@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+}
+html {
+  @apply scroll-smooth;
+}
+body,
+#__next {
+  @apply bg-black leading-relaxed text-zinc-400 antialiased;
+}
+.eyebrow {
+  @apply py-10 text-lg font-semibold uppercase tracking-wider text-zinc-200;
+}
+
+.button {
+  @apply border-white bg-gradient-to-b from-slate-800 to-slate-300/30 
+   hover:from-slate-100/20 hover:to-slate-800 focus:translate-y-px;
+}
+.btn-cool-shadow {
+  box-shadow:
+    rgba(0, 0, 0, 0.8) 0px -1px 0px 1px inset,
+    rgba(48, 48, 48) 0px 0px 0px 1px inset,
+    rgba(255, 255, 255, 0.25) 0px 0.5px 0px 1.5px inset;
+}
+.btn-cool-shadow:focus {
+  box-shadow:
+    rgba(0, 0, 0, 0.8) 0px -1px 0px 1px inset,
+    rgba(48, 48, 48) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.25) 0px 0.5px 0px 1.5px inset;
+}
