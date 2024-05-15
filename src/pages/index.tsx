@@ -4,6 +4,7 @@ import HeroSection, { ProfileLinks } from "~/components/HeroSection";
 import ExperienceSection from "~/components/ExperienceSection";
 import { FadeIn } from "~/components/Effects/FadeIn";
 import Layout from "~/components/Layout";
+import ProfileSection from "~/components/ProfileSection";
 
 const title = "Jean Duquenne";
 const description = "Jean Duquenne | Software Engineer";
@@ -54,24 +55,28 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
       </Head>
       <Layout>
-        <div className="mt-14 sm:mt-20 md:mt-32">
+        {/* <div className="mt-14 sm:mt-20 md:mt-32">
           <HeroSection />
-        </div>
-        <div className="relative mt-4 justify-between gap-10 sm:mt-12 md:mt-16 lg:flex">
-          <div className="pt-10 lg:pb-16">
-            <ExperienceSection />
-          </div>
+        </div> */}
+        <div className="relative justify-between gap-10 lg:flex">
           <div className="mt-4 sm:mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
-            <div className=" flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
+            <div className="flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
               <div className="flex grow flex-col justify-between pt-10 lg:pb-16">
-                <ContactFormSection />
-                <div className="mt-6 hidden pl-4 lg:block">
+                {/* <ContactFormSection /> */}
+                <ProfileSection />
+                <div className=" mx-auto mt-6 w-full  max-w-2xl">
                   <FadeIn viewportAlt="once">
                     <ProfileLinks />
                   </FadeIn>
+                  <div />
                 </div>
               </div>
             </div>
+          </div>
+          <div className="space-y-20 pt-10 lg:pb-16">
+            <HeroSection />
+            <ExperienceSection />
+            <ContactFormSection />
           </div>
         </div>
       </Layout>
