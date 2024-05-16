@@ -72,13 +72,12 @@ export function ProfileLinks() {
 export default function HeroSection() {
   return (
     <div className="mx-auto max-w-2xl pt-12">
-      <FadeSide side="left">
+      {/*  <FadeSide side="left">
         <div className=" flex flex-wrap gap-4 sm:gap-8">
           <div className="relative flex-shrink-0">
             <Avatar />
           </div>
-          {/* </FadeSide> */}
-          {/* <FadeSide side="right"> */}
+        
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-zinc-200 sm:text-5xl">
               <Link href="/">Jean Duquenne</Link>
@@ -88,7 +87,7 @@ export default function HeroSection() {
             </h2>
           </div>
         </div>
-      </FadeSide>
+      </FadeSide> */}
 
       <FadeIn>
         <p className="mb-6 mt-5 text-base text-zinc-400">
@@ -97,7 +96,7 @@ export default function HeroSection() {
           machine learning, and full-stack web development. Trying to build cool
           stuff and learn new things.
         </p>
-        <ProfileLinks />
+        {/* <ProfileLinks /> */}
       </FadeIn>
     </div>
   );

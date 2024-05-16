@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GitHubIcon, LinkedInIcon, profilePic } from "~/assets";
+import { GitHubIcon, LinkedInIcon, headShot, profilePic } from "~/assets";
 import clsx from "clsx";
 import Image from "next/image";
 import LinkWithArrow from "./LinkWithArrow";
@@ -34,7 +34,7 @@ function Avatar({
       {...props}
     >
       <Image
-        src={profilePic}
+        src={headShot}
         alt="Jean Duquenne 8bit avatar"
         width={64}
         height={64}
@@ -97,7 +97,6 @@ export default function ProfileSection() {
           machine learning, and full-stack web development. Trying to build cool
           stuff and learn new things.
         </p>
-        {/* <ProfileLinks /> */}
       </FadeIn>
     </div>
   );

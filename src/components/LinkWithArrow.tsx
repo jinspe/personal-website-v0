@@ -27,7 +27,7 @@ export default function LinkWithArrow({
 }) {
   return (
     <a
-      className="group/link inline-flex items-baseline text-base font-medium leading-tight text-zinc-200  hover:text-cyan-300 focus-visible:text-cyan-300"
+      className="group/link inline-flex items-baseline text-lg font-medium leading-tight text-zinc-200  hover:text-cyan-300 focus-visible:text-cyan-300"
       href={href}
       target="_blank"
       rel="noreferrer noopener"

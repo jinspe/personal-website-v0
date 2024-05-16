@@ -5,6 +5,7 @@ import ExperienceSection from "~/components/ExperienceSection";
 import { FadeIn } from "~/components/Effects/FadeIn";
 import Layout from "~/components/Layout";
 import ProfileSection from "~/components/ProfileSection";
+import ProjectSection from "~/components/ProjectSection";
 
 const title = "Jean Duquenne";
 const description = "Jean Duquenne | Software Engineer";
@@ -75,6 +76,7 @@ export default function Home() {
           </div>
           <div className="space-y-20 pt-10 lg:pb-16">
             <HeroSection />
+            <ProjectSection />
             <ExperienceSection />
             <ContactFormSection />
           </div>

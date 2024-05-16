@@ -1,4 +1,8 @@
 export const profilePic = "/profile-8bit.png";
+export const headShot = "/headshot.jpg";
+
+// Videos
+export const neuroMuscularVideo = "/videos/neuromuscular.mp4";
 
 export function GitHubIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
