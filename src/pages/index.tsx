@@ -63,7 +63,7 @@ export default function Home() {
         <div className="relative justify-between gap-20 lg:flex">
           <div className="mt-4 sm:mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
             <div className="flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
-              <div className="flex grow flex-col justify-between pt-10 lg:pb-10">
+              <div className="flex grow flex-col justify-between pt-16 lg:pb-16">
                 <div>
                   <ProfileSection />
                   <SideNavbar />
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="space-y-20 pt-10 lg:pb-16">
+          <div className="space-y-20 pt-10 lg:pb-16" id="sections-parent">
             <HeroSection />
             <ProjectSection />
             <ExperienceSection />

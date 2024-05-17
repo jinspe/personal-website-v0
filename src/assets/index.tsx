@@ -3,6 +3,12 @@ export const headShot = "/headshot.jpg";
 
 // Videos
 export const neuroMuscularVideo = "/videos/neuromuscular.mp4";
+export const eggSorterVideo = "/videos/eggsort.mp4";
+export const multimodalVRVideo = "/videos/multimodvr.mp4";
+export const qwestiveQAVideo = "/videos/qqa.mp4";
+export const qwestiveRefVideo = "/videos/qref.mp4";
+export const qwestiveCRMVideo = "/videos/qcrm.mp4";
+export const solsponsorVideo = "/videos/solsponsor.mp4";
 
 export function GitHubIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (

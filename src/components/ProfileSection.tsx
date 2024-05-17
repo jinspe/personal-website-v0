@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { GitHubIcon, LinkedInIcon, headShot, profilePic } from "~/assets";
+import { GitHubIcon, LinkedInIcon, headShot } from "~/assets";
 import clsx from "clsx";
 import Image from "next/image";
 import LinkWithArrow from "./LinkWithArrow";
-import { FadeIn, FadeSide } from "./Effects/FadeIn";
+import { FadeSide } from "./Effects/FadeIn";
 
 const GITHUB_PROFILE = "https://github.com/jinspe";
 const LINKEDIN_PROFILE = "https://linkedin.com/in/jean-duquenne";
