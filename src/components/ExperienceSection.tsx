@@ -1,6 +1,7 @@
 import { FadeIn } from "./Effects/FadeIn";
 import ShinySpotlightBorders from "./Effects/ShinySpotlightBorders";
 import LinkWithArrow from "./LinkWithArrow";
+import { useSectionContext } from "./SectionContext";
 
 interface IExperience {
   title?: string;
@@ -189,10 +190,13 @@ function ExperienceCard({ experience }: { experience: IExperience }) {
 }
 
 export default function ExperienceSection() {
+  const { experienceSection } = useSectionContext();
+
   return (
     <section
       className="relative z-0"
-      id="experience"
+      id={experienceSection.id}
+      ref={experienceSection.ref}
       /* className="relative z-0 mt-24 sm:mt-32 lg:mt-40" id="experience" */
     >
       <FadeIn>

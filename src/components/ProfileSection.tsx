@@ -71,16 +71,16 @@ export function ProfileLinks() {
 
 export default function ProfileSection() {
   return (
-    <div className="mx-auto max-w-2xl pt-12">
+    <div className="mx-auto max-w-2xl">
       <FadeSide side="left">
-        <div className="flex flex-wrap gap-4 sm:gap-8">
+        <div className="flex flex-wrap gap-4 sm:gap-6">
           <div className="relative flex-shrink-0">
             <Avatar />
           </div>
           {/* </FadeSide> */}
           {/* <FadeSide side="right"> */}
           <div>
-            <h1 className="text-2xl font-bold tracking-tight text-zinc-200 sm:text-5xl">
+            <h1 className="text-2xl font-bold tracking-tight text-zinc-200 sm:text-4xl">
               <Link href="/">Jean Duquenne</Link>
             </h1>
             <h2 className="mt-1 text-lg font-medium tracking-tight text-zinc-200 sm:mt-3 sm:text-xl">
@@ -88,16 +88,19 @@ export default function ProfileSection() {
             </h2>
           </div>
         </div>
+        <div className="mt-6 block lg:hidden">
+          <ProfileLinks />
+        </div>
       </FadeSide>
 
-      <FadeIn>
+      {/* <FadeIn>
         <p className="mb-6 mt-5 text-base text-zinc-400">
           I&apos;m [ʒɑ̃], a software engineer with a master&apos;s in robotics
           based where the internet takes me. I&apos;m into computer vision,
           machine learning, and full-stack web development. Trying to build cool
           stuff and learn new things.
         </p>
-      </FadeIn>
+      </FadeIn> */}
     </div>
   );
 }
