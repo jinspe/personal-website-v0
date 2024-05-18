@@ -9,50 +9,60 @@ import {
 } from "~/assets";
 import { FadeIn } from "./Effects/FadeIn";
 import { useSectionContext } from "./SectionContext";
+import TagsCloud from "./Common/TagsCloud";
 
 interface Project {
   title: string;
-  link: string;
+  description: string;
   videoPath: string;
+  tags: string[];
 }
 
 const projects: Project[] = [
   {
-    title:
+    title: "Autonomyo",
+    description:
       "Creating an Adaptive Neuromuscular Controller for an Assistive Lower-Limb Exoskeleton",
-    link: "https://example.com",
     videoPath: neuroMuscularVideo,
+    tags: ["Robotics", "Python", "CMA-ES"],
   },
   {
-    title: "Improving User Interactions in VR Productivity Environments",
-    link: "https://example.com",
+    title: "VR Interactions",
+    description: "Improving User Interactions in VR Productivity Environments",
     videoPath: multimodalVRVideo,
+    tags: ["VR", "UX", "C#"],
   },
   {
-    title: "CRM and Engagement Event platform for Token Communities",
-    link: "https://example.com",
+    title: "Web3 CRM",
+    description: "CRM and Engagement Event platform for Token Communities",
     videoPath: qwestiveCRMVideo,
+    tags: ["Full-stack", "React", "Typescript"],
   },
   {
-    title:
+    title: "Egg Sorter",
+    description:
       "Deep Learning Framework for Miniature Biological Entities Classification",
-    link: "https://example.com",
     videoPath: eggSorterVideo,
+    tags: ["Deep Learning", "Computer Vision", "Python"],
   },
   {
-    title: "Patreon-like platform with on-chain transactions and NFTS",
-    link: "https://example.com",
+    title: "SolSponsor",
+    description: "Patreon-like platform with on-chain transactions and NFTS",
     videoPath: solsponsorVideo,
+    tags: ["Full-stack", "React", "Typescript"],
   },
   {
-    title: "Web3 marketing platform and referral system",
-    link: "https://example.com",
+    title: "Referral Platform",
+    description: "Web3 marketing platform and referral system",
     videoPath: qwestiveRefVideo,
+    tags: ["Full-stack", "React", "Typescript"],
   },
   {
-    title: "On-chain question bidding platform with refunds upon expiration.",
-    link: "https://example.com",
+    title: "Web3 Q&A",
+    description:
+      "On-chain question bidding platform with refunds upon expiration.",
     videoPath: qwestiveQAVideo,
+    tags: ["Full-stack", "React", "Typescript"],
   },
 ];
 
@@ -69,10 +79,11 @@ function ProjectCard({ project }: { project: Project }) {
           className=" sm:w-3/5"
         ></video>
         <div>
-          <h2 className="text-xl font-medium leading-tight text-zinc-200">
+          <h2 className="text-xl font-bold leading-tight text-zinc-200">
             {project.title}
           </h2>
-          <a href={project.link}>View Project</a>
+          <p className="mt-2">{project.description}</p>
+          <TagsCloud skills={project.tags} />
         </div>
       </div>
     </FadeIn>
@@ -85,7 +96,7 @@ export default function ProjectSection() {
   return (
     <section id={projectsSection.id} ref={projectsSection.ref}>
       <FadeIn>
-        <h2 className="eyebrow">Projects</h2>
+        <h2 className="eyebrow">Some Projects</h2>
       </FadeIn>
       <div className="mt-5 space-y-20">
         {projects.map((project) => (

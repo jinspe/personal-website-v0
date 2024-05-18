@@ -1,10 +1,10 @@
 import Head from "next/head";
 import ContactFormSection from "~/components/ContactFormSection";
-import HeroSection, { ProfileLinks } from "~/components/HeroSection";
+import HeroSection from "~/components/HeroSection";
 import ExperienceSection from "~/components/ExperienceSection";
 import { FadeIn } from "~/components/Effects/FadeIn";
 import Layout from "~/components/Layout";
-import ProfileSection from "~/components/ProfileSection";
+import ProfileSection, { ProfileLinks } from "~/components/ProfileSection";
 import ProjectSection from "~/components/ProjectSection";
 import SideNavbar from "~/components/SideNavbar";
 
@@ -61,14 +61,14 @@ export default function Home() {
           <HeroSection />
         </div> */}
         <div className="relative justify-between gap-20 lg:flex">
-          <div className="mt-4 sm:mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
+          <div className="mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
             <div className="flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
               <div className="flex grow flex-col justify-between pt-16 lg:pb-16">
                 <div>
                   <ProfileSection />
                   <SideNavbar />
                 </div>
-                <div className=" mx-auto mt-6 hidden w-full max-w-2xl lg:block ">
+                <div className="mx-auto mt-6 hidden w-full max-w-2xl lg:block ">
                   <FadeIn viewportAlt="once">
                     <ProfileLinks />
                   </FadeIn>
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="space-y-20 pt-10 lg:pb-16" id="sections-parent">
+          <div className="space-y-10 pt-10 lg:pb-16" id="sections-parent">
             <HeroSection />
             <ProjectSection />
             <ExperienceSection />

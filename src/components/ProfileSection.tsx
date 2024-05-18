@@ -2,7 +2,7 @@ import Link from "next/link";
 import { GitHubIcon, LinkedInIcon, headShot } from "~/assets";
 import clsx from "clsx";
 import Image from "next/image";
-import LinkWithArrow from "./LinkWithArrow";
+import LinkWithArrow from "./Common/LinkWithArrow";
 import { FadeSide } from "./Effects/FadeIn";
 
 const GITHUB_PROFILE = "https://github.com/jinspe";
@@ -88,7 +88,7 @@ export default function ProfileSection() {
             </h2>
           </div>
         </div>
-        <div className="mt-6 block lg:hidden">
+        <div className="mt-10 block lg:hidden">
           <ProfileLinks />
         </div>
       </FadeSide>
