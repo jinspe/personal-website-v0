@@ -6,6 +6,7 @@ import {
   qwestiveRefVideo,
   qwestiveCRMVideo,
   solsponsorVideo,
+  buildBuddyVideo,
 } from "~/assets";
 import { FadeIn } from "./Effects/FadeIn";
 import { useSectionContext } from "./SectionContext";
@@ -20,17 +21,10 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Autonomyo",
-    description:
-      "Creating an Adaptive Neuromuscular Controller for an Assistive Lower-Limb Exoskeleton",
-    videoPath: neuroMuscularVideo,
-    tags: ["Robotics", "Python", "CMA-ES"],
-  },
-  {
-    title: "VR Interactions",
-    description: "Improving User Interactions in VR Productivity Environments",
-    videoPath: multimodalVRVideo,
-    tags: ["VR", "UX", "C#"],
+    title: "Build Buddy",
+    description: "Furniture assembly instructions in 3D 🔨",
+    videoPath: buildBuddyVideo,
+    tags: ["VR/AR", "Unity", "C#"],
   },
   {
     title: "Web3 CRM",
@@ -39,11 +33,11 @@ const projects: Project[] = [
     tags: ["Full-stack", "React", "Typescript"],
   },
   {
-    title: "Egg Sorter",
+    title: "Autonomyo",
     description:
-      "Deep Learning Framework for Miniature Biological Entities Classification",
-    videoPath: eggSorterVideo,
-    tags: ["Deep Learning", "Computer Vision", "Python"],
+      "Creating an Adaptive Neuromuscular Controller for an Assistive Lower-Limb Exoskeleton",
+    videoPath: neuroMuscularVideo,
+    tags: ["Robotics", "Python", "CMA-ES"],
   },
   {
     title: "SolSponsor",
@@ -51,6 +45,20 @@ const projects: Project[] = [
     videoPath: solsponsorVideo,
     tags: ["Full-stack", "React", "Typescript"],
   },
+  {
+    title: "VR Interactions",
+    description: "Improving User Interactions in VR Productivity Environments",
+    videoPath: multimodalVRVideo,
+    tags: ["VR", "UX", "C#"],
+  },
+  {
+    title: "Egg Sorter",
+    description:
+      "Deep Learning Framework for Miniature Biological Entities Classification",
+    videoPath: eggSorterVideo,
+    tags: ["Deep Learning", "Computer Vision", "Python"],
+  },
+
   {
     title: "Referral Platform",
     description: "Web3 marketing platform and referral system",
