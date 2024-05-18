@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FadeIn } from "./Effects/FadeIn";
 
 const navigations = [
-  { name: "About", href: "top" },
+  { name: "Projects", href: "top" },
   { name: "Experience", href: "experience" },
   { name: "Contact", href: "contact" },
 ];
@@ -67,7 +67,7 @@ export function Navbar() {
   }, [prevScrollPos]);
   return (
     <header
-      className={`fixed left-1/2 top-0 z-50 -translate-x-1/2 transition-all duration-500 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      className={`fixed left-1/2 top-0 z-50 -translate-x-1/2 transition-all duration-500 lg:hidden ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="z-10 h-16 pt-4">
         <FadeIn side="down">

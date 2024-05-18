@@ -1,6 +1,8 @@
 import { FadeIn } from "./Effects/FadeIn";
 import ShinySpotlightBorders from "./Effects/ShinySpotlightBorders";
-import LinkWithArrow from "./LinkWithArrow";
+import LinkWithArrow from "./Common/LinkWithArrow";
+import { useSectionContext } from "./SectionContext";
+import TagsCloud from "./Common/TagsCloud";
 
 interface IExperience {
   title?: string;
@@ -124,20 +126,6 @@ const experiences: IExperience[] = [
   },
 ];
 
-function Skills({ skills }: { skills: string[] }) {
-  return (
-    <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-      {skills.map((skill) => (
-        <li key={skill} className="mr-1.5 mt-2">
-          <div className="flex items-center rounded-full bg-cyan-400/15 px-3 py-1 text-xs font-medium leading-5 text-cyan-300 ">
-            {skill}
-          </div>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 function ExperienceCard({ experience }: { experience: IExperience }) {
   return (
     <FadeIn>
@@ -179,7 +167,7 @@ function ExperienceCard({ experience }: { experience: IExperience }) {
               <p className="mt-2 text-sm leading-normal text-zinc-400">
                 {experience.description}
               </p>
-              <Skills skills={experience.skills} />
+              <TagsCloud skills={experience.skills} />
             </div>
           </div>
         </div>
@@ -189,10 +177,13 @@ function ExperienceCard({ experience }: { experience: IExperience }) {
 }
 
 export default function ExperienceSection() {
+  const { experienceSection } = useSectionContext();
+
   return (
     <section
       className="relative z-0"
-      id="experience"
+      id={experienceSection.id}
+      ref={experienceSection.ref}
       /* className="relative z-0 mt-24 sm:mt-32 lg:mt-40" id="experience" */
     >
       <FadeIn>

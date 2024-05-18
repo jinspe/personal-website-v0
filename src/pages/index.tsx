@@ -1,9 +1,12 @@
 import Head from "next/head";
 import ContactFormSection from "~/components/ContactFormSection";
-import HeroSection, { ProfileLinks } from "~/components/HeroSection";
+import HeroSection from "~/components/HeroSection";
 import ExperienceSection from "~/components/ExperienceSection";
 import { FadeIn } from "~/components/Effects/FadeIn";
 import Layout from "~/components/Layout";
+import ProfileSection, { ProfileLinks } from "~/components/ProfileSection";
+import ProjectSection from "~/components/ProjectSection";
+import SideNavbar from "~/components/SideNavbar";
 
 const title = "Jean Duquenne";
 const description = "Jean Duquenne | Software Engineer";
@@ -54,24 +57,31 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
       </Head>
       <Layout>
-        <div className="mt-14 sm:mt-20 md:mt-32">
+        {/* <div className="mt-14 sm:mt-20 md:mt-32">
           <HeroSection />
-        </div>
-        <div className="relative mt-4 justify-between gap-10 sm:mt-12 md:mt-16 lg:flex">
-          <div className="pt-10 lg:pb-16">
-            <ExperienceSection />
-          </div>
-          <div className="mt-4 sm:mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
-            <div className=" flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
-              <div className="flex grow flex-col justify-between pt-10 lg:pb-16">
-                <ContactFormSection />
-                <div className="mt-6 hidden pl-4 lg:block">
+        </div> */}
+        <div className="relative justify-between gap-20 lg:flex">
+          <div className="mt-12 md:mt-16 lg:mt-0 lg:min-w-[33%]">
+            <div className="flex lg:sticky lg:top-0 lg:min-h-screen lg:flex-col ">
+              <div className="flex grow flex-col justify-between pt-16 lg:pb-16">
+                <div>
+                  <ProfileSection />
+                  <SideNavbar />
+                </div>
+                <div className="mx-auto mt-6 hidden w-full max-w-2xl lg:block ">
                   <FadeIn viewportAlt="once">
                     <ProfileLinks />
                   </FadeIn>
+                  <div />
                 </div>
               </div>
             </div>
+          </div>
+          <div className="space-y-10 pt-10 lg:pb-16" id="sections-parent">
+            <HeroSection />
+            <ProjectSection />
+            <ExperienceSection />
+            <ContactFormSection />
           </div>
         </div>
       </Layout>

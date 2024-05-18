@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { api } from "~/utils/api";
 import { IContactForm, contactFormInputVerifier } from "~/utils/utils";
 import { FadeIn } from "./Effects/FadeIn";
+import { useSectionContext } from "./SectionContext";
 
 const TextInput = forwardRef<
   HTMLInputElement,
@@ -173,10 +174,13 @@ function ContactForm() {
 }
 
 export default function ContactFormSection() {
+  const { contactSection } = useSectionContext();
+
   return (
     <section
       className="relative z-0"
-      id="contact"
+      id={contactSection.id}
+      ref={contactSection.ref}
       /* className="relative z-0 mt-24 sm:mt-32 lg:mt-40" id="contact" */
     >
       {/*       <div className="translate-z-0 absolute inset-10 rounded-full bg-slate-800/50 blur-[80px]"></div>
