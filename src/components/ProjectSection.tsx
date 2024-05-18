@@ -2,7 +2,7 @@ import {
   neuroMuscularVideo,
   eggSorterVideo,
   multimodalVRVideo,
-  qwestiveQAVideo,
+  // qwestiveQAVideo,
   qwestiveRefVideo,
   qwestiveCRMVideo,
   solsponsorVideo,
@@ -65,13 +65,13 @@ const projects: Project[] = [
     videoPath: qwestiveRefVideo,
     tags: ["Full-stack", "React", "Typescript"],
   },
-  {
+  /* {
     title: "Web3 Q&A",
     description:
       "On-chain question bidding platform with refunds upon expiration.",
     videoPath: qwestiveQAVideo,
     tags: ["Full-stack", "React", "Typescript"],
-  },
+  }, */
 ];
 
 function ProjectCard({ project }: { project: Project }) {
@@ -83,7 +83,10 @@ function ProjectCard({ project }: { project: Project }) {
           autoPlay
           loop
           muted
-          controls
+          playsInline
+          onClick={(e) => {
+            e.currentTarget.controls = true;
+          }}
           className=" sm:w-3/5"
         ></video>
         <div>
