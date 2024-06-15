@@ -25,9 +25,10 @@ const experiences: IExperience[] = [
     location: "Geneva, Switzerland",
     startDate: "Nov 2023",
     endDate: "Current",
-    description: `Developed fully customizable and optimized lightweight Shopify theme app extensions and Bubble.io widgets, seamlessly delivered to high-traffic websites via CDN without compromising performance. 
-      Created a range of optimized, responsive, and accessible widgets, ensuring excellent display across all devices and screen sizes. 
-      Implemented scalable data pipelines using web scraping techniques and diverse APIs, leveraging Google Cloud services. Bootstrapping Micro SaaS products.`,
+    description: `Developed lightweight Shopify theme app extensions and Bubble.io widgets, delivered to 600+ high-traffic websites via CDN with zero performance issues. 
+    Built 20+ optimized, responsive, and accessible widgets for perfect display on all devices. 
+    Created scalable data pipelines using various APIs, leveraging Google Cloud services. 
+    Bootstrapped and launched 5 Micro SaaS products from scratch`,
     skills: [
       "Webpack",
       "Typescript",
@@ -48,10 +49,11 @@ const experiences: IExperience[] = [
     location: "Remote / Paris, France",
     startDate: "Nov 2021",
     endDate: "Nov 2023",
-    description: `Designed and developed three web applications, recognized with awards in hackathons, and selected for incubation by Binance and Google Startups. 
-    Iterating towards Product-Market Fit, orchestrated advanced features and complex user flows, including smart-contract tracking, multisig transactions, embedded tracking scripts, APIs, form builders, token gating, analytic dashboards, and more. 
-    Led development, driving fast development cycles while maintaining a clean, modular, and easily maintainable codebase
-    Executed Continuous Integration/Deployment, pull requests, code reviews, recruitments, and comprehensive testing.`,
+    description: `Designed and developed 3 award-winning web applications, selected among 700+ startups for incubation by Binance and Google Startups. 
+    Grew user base to 50,000+, winning the BitDAO hackathon ($12.5k prize). 
+    Iterated towards Product-Market Fit, implementing advanced features and complex user flows. 
+    Led development with rapid cycles, ensuring a clean, modular, and maintainable codebase. 
+    Executed Continuous Integration/Deployment, pull requests, code reviews, recruitments, and comprehensive testing`,
     // description:
     //  "Led the design and development of three web applications, recognized with awards in hackathons, and selected for incubation by Binance and Google startups program. Iterating our way to Product Market Fit, I orchestrated advanced features and complex user flows, including smart-contract tracking, multisig transactions, embedded tracking scripts, APIs, form builders, token gating, and analytic dashboards. Elected CTO for the team, showcasing rapid solution architecture and implementation skills while maintaining a clean, modular, and easily maintainable codebase. Oversaw optimal developer environment and documentation for efficient next-day updates based on customer requests. Executed Continuous Integration/Deployment Pipeline Integration, pull requests, code reviews, and comprehensive testing.",
     skills: [
@@ -78,10 +80,10 @@ const experiences: IExperience[] = [
     location: "Lausanne, Switzerland",
     startDate: "Aug 2020",
     endDate: "May 2021",
-    description: `Developed VR applications in Unity to measure and test the ergonomics of various input modalities, contributing to Logitech's stylus measurement, comparison, and improvement efforts. 
-      Conducted user experiments on VR input modalities, adapting ISO 9241-411 and Fitts law for 3D interactions. 
-      Researched and developed virtual keyboards, including surface-aligned designs and models with integrated hardware components. 
-      Integrated hand tracking into Logitech's virtual meeting VR app using gestures.`,
+    description: `Developed VR applications in Unity to test ergonomics of various input modalities, aiding Logitech's stylus improvement efforts. 
+    Conducted user experiments on VR input modalities, adapting ISO 9241-411 and Fitts law for 3D interactions. 
+    Researched and developed virtual keyboards, including surface-aligned designs and models with integrated hardware. 
+    Integrated hand tracking with gesture controls into Logitech's virtual meeting VR app`,
     skills: [
       "VR",
       "Unity",
@@ -100,9 +102,8 @@ const experiences: IExperience[] = [
     location: "Lonay, Switzerland",
     startDate: "Feb 2020",
     endDate: "Aug 2020",
-    description: `Enhanced the gait of the Autonomyo exoskeleton in OpenSim by significantly improving natural movement simulation. 
-    Utilized CMA-ES for actuator optimization, achieving a realistic gait that addresses muscle weaknesses. 
-    Integrated and optimized a neuromuscular controller, advancing the project’s simulation accuracy.`,
+    description: `Implemented an exoskeleton in a biomechanically accurate simulator. 
+    Applied CMA-ES for actuator optimization, achieving a realistic gait and addressing muscle weaknesses`,
     skills: ["Python", "3D Modeling", "OpenSim", "CMAES", "C++"],
   },
   {
@@ -114,8 +115,8 @@ const experiences: IExperience[] = [
     startDate: "Sept 2019",
     endDate: "Feb 2020",
     description: `
-      Improved miniature biological entities classification from 90% to nearly 100% accuracy by transitioning from a Gaussian mixture model to a deep learning framework. 
-      Created a framework for classification tasks with convolutional neural networks, ensuring reliability and device integration.`,
+      Enhanced classification accuracy of miniature biological entities from 90% to nearly 100% by shifting from a Gaussian mixture model to a deep learning framework. 
+      Developed a classification framework using convolutional neural networks (CNNs), ensuring reliable performance and android device compatibility`,
     skills: [
       "Python",
       "Keras",
@@ -164,9 +165,16 @@ function ExperienceCard({ experience }: { experience: IExperience }) {
                   </div> */}
                 </div>
               </h3>
-              <p className="mt-2 text-sm leading-normal text-zinc-400">
+              {/* <p className="mt-2 text-sm leading-normal text-zinc-400">
                 {experience.description}
-              </p>
+              </p> */}
+              <ul className="mt-2 list-outside list-disc space-y-2 pl-3.5 text-sm leading-normal text-zinc-400">
+                {experience.description.split(". ").map(
+                  (point, index) =>
+                    // Check if point is not empty to avoid rendering empty list items
+                    point.trim() !== "" && <li key={index}>{point}.</li>,
+                )}
+              </ul>
               <TagsCloud skills={experience.skills} />
             </div>
           </div>
