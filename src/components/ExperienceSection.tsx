@@ -25,7 +25,7 @@ const experiences: IExperience[] = [
     location: "Geneva, Switzerland",
     startDate: "Nov 2023",
     endDate: "Current",
-    description: `Developed lightweight Shopify theme app extensions and Bubble.io widgets, delivered to 600+ high-traffic websites via CDN with zero performance issues. 
+    description: `Developed lightweight Shopify theme app extensions and Bubble.io widgets, delivered to 600+ high-traffic websites via CDN with excellent performance. 
     Built 20+ optimized, responsive, and accessible widgets for perfect display on all devices. 
     Created scalable data pipelines using various APIs, leveraging Google Cloud services. 
     Bootstrapped and launched 5 Micro SaaS products from scratch`,
@@ -53,7 +53,7 @@ const experiences: IExperience[] = [
     Grew user base to 50,000+, winning the BitDAO hackathon ($12.5k prize). 
     Iterated towards Product-Market Fit, implementing advanced features and complex user flows. 
     Led development with rapid cycles, ensuring a clean, modular, and maintainable codebase. 
-    Executed Continuous Integration/Deployment, pull requests, code reviews, recruitments, and comprehensive testing`,
+    Executed Continuous Integration/Deployment, test, code reviews, recruitments, and comprehensive testing`,
     // description:
     //  "Led the design and development of three web applications, recognized with awards in hackathons, and selected for incubation by Binance and Google startups program. Iterating our way to Product Market Fit, I orchestrated advanced features and complex user flows, including smart-contract tracking, multisig transactions, embedded tracking scripts, APIs, form builders, token gating, and analytic dashboards. Elected CTO for the team, showcasing rapid solution architecture and implementation skills while maintaining a clean, modular, and easily maintainable codebase. Oversaw optimal developer environment and documentation for efficient next-day updates based on customer requests. Executed Continuous Integration/Deployment Pipeline Integration, pull requests, code reviews, and comprehensive testing.",
     skills: [
