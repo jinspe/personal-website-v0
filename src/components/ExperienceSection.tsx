@@ -27,8 +27,7 @@ const experiences: IExperience[] = [
     endDate: "Current",
     description: `Developed lightweight Shopify theme app extensions and Bubble.io widgets, delivered to 600+ high-traffic websites via CDN with excellent performance. 
     Built 20+ optimized, responsive, and accessible widgets for perfect display on all devices. 
-    Created scalable data pipelines using various APIs, leveraging Google Cloud services. 
-    Bootstrapped and launched 5 Micro SaaS products from scratch`,
+    Created scalable data pipelines using various APIs, leveraging Google Cloud services`,
     skills: [
       "Webpack",
       "Typescript",
