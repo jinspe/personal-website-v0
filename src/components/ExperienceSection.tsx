@@ -3,6 +3,7 @@ import ShinySpotlightBorders from "./Effects/ShinySpotlightBorders";
 import LinkWithArrow from "./Common/LinkWithArrow";
 import { useSectionContext } from "./SectionContext";
 import TagsCloud from "./Common/TagsCloud";
+import { LINKEDIN_PROFILE } from "./ProfileSection";
 
 interface IExperience {
   title?: string;
@@ -19,9 +20,8 @@ interface IExperience {
 const experiences: IExperience[] = [
   {
     // title: "Full-stack Developer",
-    // company: "Flagstonelab",
-    href: "https://flagstonelab.com",
-    company: "Independent Software Engineer",
+    href: LINKEDIN_PROFILE, // "https://flagstonelab.com",
+    company: "Independent Software Engineer", // "Flagstonelab",
     location: "Geneva, Switzerland",
     startDate: "Nov 2023",
     endDate: "Current",
@@ -43,7 +43,7 @@ const experiences: IExperience[] = [
   {
     title: "Co-Founder & CTO",
     additionalTitle: "Full-stack Engineer",
-    href: "https://www.qwestive.io",
+    href: LINKEDIN_PROFILE, // "https://www.qwestive.io",
     company: "Qwestive",
     location: "Remote / Paris, France",
     startDate: "Nov 2021",

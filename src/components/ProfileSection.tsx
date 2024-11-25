@@ -6,7 +6,7 @@ import LinkWithArrow from "./Common/LinkWithArrow";
 import { FadeSide } from "./Effects/FadeIn";
 
 const GITHUB_PROFILE = "https://github.com/jinspe";
-const LINKEDIN_PROFILE = "https://linkedin.com/in/jean-duquenne";
+export const LINKEDIN_PROFILE = "https://linkedin.com/in/jean-duquenne";
 const RESUME_LINK = "/jean-duquenne-resume.pdf";
 
 function SocialLink({
